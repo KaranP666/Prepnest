@@ -6,10 +6,9 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { toast } from "sonner";
+import FormField from "./FormField";
 import { useRouter } from "next/navigation";
-import { Form } from "@/components/ui/form";
-import FormField from "@/components/FormField";
-
+import { Form } from "./ui/form";
 
 
 const authFormSchema = (type: FormType) => {
@@ -57,7 +56,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
       <div className="flex flex-col gap-6 card py-14 px-10">
         <div className="flex flex-row gap-2 justify-center">
           <Image src="/logo.svg" alt="logo" height={32} width={38} />
-          <h2 className="text-primary-100">Interviewly</h2>
+          <h2 className="text-primary-100">Prepnest</h2>
         </div>
         <h3>Practice job interview with AI</h3>
 

@@ -9,7 +9,7 @@ const monaSans = Mona_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Interviewly",
+  title: "Prepnest",
   description: "An AI-Powered Interview Practice Platform",
 };
 
