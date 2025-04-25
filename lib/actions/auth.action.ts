@@ -120,3 +120,13 @@ export async function isAuthenticated() {
     return !!user; // '' -> 1st !'' -> true -> 2nd !true -> fale
     
 }
+
+export async function logoutUser() {
+    const cookieStore = await cookies(); 
+    
+    cookieStore.set('session', '', {
+      maxAge: -1,
+      path: '/',
+    });
+  }
+  
