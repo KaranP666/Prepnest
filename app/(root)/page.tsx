@@ -33,7 +33,7 @@ const page = async () => {
             Practice on real interview questions & get instant feedback
           </p>
           <Button asChild className="btn-primary max-sm:w-full">
-            <Link href="/interview">Start an Intervirew</Link>
+          <Link href="/interview">Start an Intervirew</Link>
           </Button>
         </div>
 
@@ -64,7 +64,7 @@ const page = async () => {
 
         <div className="interviews-section">
         { hasUpcommingInterview ? (
-            userInterviews?.map((interview) => (
+            latestInterviews?.map((interview) => (
               <InterviewCard {...interview} key={interview.id} />
             ))
           ) : (
