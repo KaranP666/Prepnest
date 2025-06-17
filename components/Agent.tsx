@@ -10,7 +10,7 @@ import { createFeedback } from "@/lib/actions/general.action";
 
 enum CallStatus {
   INACTIVE = "INACTIVE",
-  CONNECTING = "CONNECTNG",
+  CONNECTING = "CONNECTING",
   ACTIVE = "ACTIVE",
   FINISHED = "FINISHED",
 }
@@ -64,7 +64,7 @@ const Agent = ({ userName, userId, type , interviewId,questions }: AgentProps) =
     console.log('Generate feedback here');
     const {success, feedbackId: id } =  await createFeedback({
       interviewId : interviewId,
-      userId: userId,
+      userid: userId,
       transcript : messages
     })
    // todo : create server action that generate feedback : done
@@ -72,11 +72,8 @@ const Agent = ({ userName, userId, type , interviewId,questions }: AgentProps) =
       router.push(`/interview/${interviewId}/feedback`)
     }else{
       console.log("Error saving feedback");
-      router.push('/')
-      
+      router.push('/') 
     }
-    
-
   }
 
   useEffect(() => {
@@ -178,7 +175,7 @@ const Agent = ({ userName, userId, type , interviewId,questions }: AgentProps) =
             <span
               className={cn(
                 "absolute animate-ping rounded-full opacity-75",
-                callStatus != "CONNECTNG" && "hidden"
+                callStatus != "CONNECTING" && "hidden"
               )}
             />
 
